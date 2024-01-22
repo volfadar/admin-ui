@@ -3,40 +3,40 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Inter";
-  src: url("../../fonts/Lexend-Regular.ttf") format("truetype");
+  font-family: 'Inter';
+  src: url('../../fonts/Lexend-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../../fonts/Lexend-Medium.ttf") format("truetype");
+  font-family: 'Inter';
+  src: url('../../fonts/Lexend-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../../fonts/Lexend-SemiBold.ttf") format("truetype");
+  font-family: 'Inter';
+  src: url('../../fonts/Lexend-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto Mono";
-  src: url("../../fonts/Inter-Bold.ttf") format("truetype");
+  font-family: 'Roboto Mono';
+  src: url('../../fonts/Inter-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto Mono";
-  src: url("../../fonts/Inter-Regular.ttf") format("truetype");
+  font-family: 'Roboto Mono';
+  src: url('../../fonts/Inter-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -175,7 +175,7 @@
     @apply text-xsmall leading-xsmall font-mono font-bold;
   }
 
-  .radio-outer-ring > span.indicator[data-state="checked"] {
+  .radio-outer-ring > span.indicator[data-state='checked'] {
     @apply rounded-circle shadow-orange-60 shadow-[0_0_0_2px];
   }
 
@@ -407,12 +407,12 @@
     @apply from-vice-start to-vice-stop bg-gradient-to-tr;
   }
 
-  .hidden-actions[data-state="open"] {
+  .hidden-actions[data-state='open'] {
     opacity: 1;
   }
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -462,4 +462,42 @@
 /* Firefox */
 .remove-number-spinner {
   -moz-appearance: textfield;
+}
+
+.google-signin-button {
+  color: white;
+  background-color: #4285f4;
+  border-radius: 0.5rem; /* equivalent to rounded-lg in Tailwind */
+  padding: 0.625rem 1.25rem; /* equivalent to py-2.5 and px-5 in Tailwind */
+  font-size: 0.875rem; /* equivalent to text-sm in Tailwind */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500; /* equivalent to font-medium in Tailwind */
+  margin-right: 0.5rem; /* equivalent to mr-2 in Tailwind */
+  margin-bottom: 0.5rem; /* equivalent to mb-2 in Tailwind */
+  transition: background-color 0.2s; /* for the hover effect */
+}
+
+.google-signin-button:hover {
+  background-color: #4285f4cc; /* equivalent to hover:bg-[#4285F4]/90 in Tailwind */
+}
+
+.google-signin-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(66, 133, 244, 0.5); /* equivalent to focus:ring-4 focus:ring-[#4285F4]/50 in Tailwind */
+}
+
+.google-signin-button svg {
+  margin-right: 0.5rem; /* equivalent to mr-2 in Tailwind */
+  margin-left: -0.25rem; /* equivalent to -ml-1 in Tailwind */
+  width: 1rem; /* equivalent to w-4 in Tailwind */
+  height: 1rem; /* equivalent to h-4 in Tailwind */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .google-signin-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(66, 133, 244, 0.55); /* equivalent to dark:focus:ring-[#4285F4]/55 in Tailwind */
+  }
 }
