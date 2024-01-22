@@ -6,6 +6,8 @@ import ResetTokenCard from '../components/organisms/reset-token-card';
 import SEO from '../components/seo';
 import PublicLayout from '../components/templates/login-layout';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const LoginPage = () => {
   const [resetPassword, setResetPassword] = useState(false);
 
@@ -45,7 +47,11 @@ const LoginPage = () => {
       )}
       <a
         type='button'
-        onClick={() => navigate('/store/auth/google', { replace: true })}
+        href={
+          isProd
+            ? '/admin/auth/google'
+            : 'http://localhost:9000/admin/auth/google'
+        }
         className='google-signin-button'
       >
         <svg
