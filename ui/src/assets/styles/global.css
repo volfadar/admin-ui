@@ -477,6 +477,7 @@
   margin-right: 0.5rem; /* equivalent to mr-2 in Tailwind */
   margin-bottom: 0.5rem; /* equivalent to mb-2 in Tailwind */
   transition: background-color 0.2s; /* for the hover effect */
+  cursor: pointer;
 }
 
 .google-signin-button:hover {
